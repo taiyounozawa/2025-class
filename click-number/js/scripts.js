@@ -6,6 +6,20 @@ for (var num=9;num>0;num--) {
 	var function_name = "remove(" + num + ")" 
 	elm.setAttribute("onclick", function_name);
 
+    // 数字ごとに色を変える
+    var colors = [
+        "#e57373", // 9
+        "#f06292", // 8
+        "#ba68c8", // 7
+        "#64b5f6", // 6
+        "#4db6ac", // 5
+        "#81c784", // 4
+        "#ffd54f", // 3
+        "#ffb74d", // 2
+        "#a1887f"  // 1
+    ];
+    elm.style.backgroundColor = colors[9 - num];
+
     // 大きさをランダム
     var size = 25 + Math.floor(Math.random() * 100); 
     elm.style.width = size + "px";
