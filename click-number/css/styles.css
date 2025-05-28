@@ -4,7 +4,7 @@ body {
 
 .circle {
 	background-color: skyblue;
-	border-radius: 30px;
+	border-radius: 50%;
 	height: 60px;
 	width: 60px;
 	font-size: 24px;
