@@ -5,32 +5,17 @@ document.getElementById('draw').addEventListener('click', function () {
 
     const resultElement = document.getElementById('result');
 
-    switch(result){
-        case '大吉':
-            resultElement.style.color = "deeppink";
-            break;
-        case '吉':
-            resultElement.style.color = "orangered";
-            break;
-        case '中吉':
-            resultElement.style.color = "green";
-            break;
-        case '小吉':
-            resultElement.style.color = "lawngreen";
-            break;
-        case '末吉':
-            resultElement.style.color = "deepskyblue";
-            break;
-        case '凶':
-            resultElement.style.color = "mediumblue";
-            break;
-        case '大凶':
-            resultElement.style.color = "darkmagenta";
-            break;
-        default:
-            break;
+    const resultColors = {
+        '大吉': 'deeppink',
+        '吉': 'orangered',
+        '中吉': 'green',
+        '小吉': 'lawngreen',
+        '末吉': 'deepskyblue',
+        '凶': 'mediumblue',
+        '大凶': 'darkmagenta',
     }
 
-    //document.getElementById('result').textContent = `あなたの運勢は... ${result}!`;
+    resultElement.style.color = resultColors[result] || 'black';
+    
     resultElement.textContent = `あなたの運勢は... ${result}!`;
 });
